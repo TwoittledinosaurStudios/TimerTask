@@ -1,6 +1,8 @@
-package com.ChangeBUG.Tools;
+package com.ChangeBUG.Utils;
 
 import com.sun.mail.util.MailSSLSocketFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -10,29 +12,30 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-public class JavaMail {
+public class MailUtils {
 
-    public static void main(String[] args) {
-        //获取开始时间
-        double start = System.currentTimeMillis();
-        boolean zhi = mailOccurs(
-                "2028744995@qq.com",
-                "mslkykbjaimceeff",
-                "2028744995@qq.com",
-                "任务 每日 汇报",
-                "完成非常不错",
-                "false"
-        );
-        //获取结束时间
-        double end = System.currentTimeMillis();
-        double time = (end - start) / 1000;
+    Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-        if (zhi) {
-            System.out.println("执行成功 -- 程序运行时间: " + time + " 秒");
-        } else {
-            System.out.println("执行失败 -- 程序运行时间: " + time + " 秒");
-        }
-
+    public static void main(String[] args) throws Exception{
+//        //获取开始时间
+//        double start = System.currentTimeMillis();
+//        boolean zhi = mailOccurs(
+//                "2028744995@qq.com",
+//                "mslkykbjaimceeff",
+//                "2028744995@qq.com",
+//                "任务 每日 汇报",
+//                "完成非常不错",
+//                "false"
+//        );
+//        //获取结束时间
+//        double end = System.currentTimeMillis();
+//        double time = (end - start) / 1000;
+//
+//        if (zhi) {
+//            System.out.println("执行成功 -- 程序运行时间: " + time + " 秒");
+//        } else {
+//            System.out.println("执行失败 -- 程序运行时间: " + time + " 秒");
+//        }
     }
 
     /**

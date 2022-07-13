@@ -1,4 +1,4 @@
-package com.ChangeBUG.Tools;
+package com.ChangeBUG.Utils;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.HttpResponse;

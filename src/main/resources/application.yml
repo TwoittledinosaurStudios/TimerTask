@@ -7,7 +7,7 @@ TimerTask:
 
 server:
   # 项目的端口号
-  port: 9090
+  port: 9091
 
 ########################### 项目整体 配置
 
@@ -37,7 +37,7 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
-    mode: HTML5
+    mode: HTML
     encoding: UTF-8
 
 ########################### MyBatis-Plus
@@ -46,7 +46,7 @@ mybatis-plus:
   global-config:
     # MyBatis-Plus 图标是否开启
     banner: false
-  type-aliases-package: com.Change_BUG.Model
+  type-aliases-package: com.ChangeBUG.Model
   configuration:
     map-underscore-to-camel-case: true
     auto-mapping-behavior: full

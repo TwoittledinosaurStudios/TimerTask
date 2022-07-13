@@ -52,7 +52,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .enable(enableSwagger)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.ChangeBUG.Controller_User"))
+                .apis(RequestHandlerSelectors.basePackage("com.ChangeBUG.Controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .securitySchemes(securitySchemes())
