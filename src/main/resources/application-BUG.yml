@@ -1,0 +1,19 @@
+spring:
+########################### MySQL数据库
+  datasource:
+    # 驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 链接
+    url: jdbc:mysql://127.0.0.1:3306/TimerTask?serverTimezone=UTC&characterEncoding=utf-8
+    # 账号
+    username: root
+    # 密码
+    password: 1234
+  # thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+
+

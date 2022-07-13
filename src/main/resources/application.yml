@@ -1,0 +1,67 @@
+########################### 项目信息
+
+TimerTask:
+  version: 1.0.1
+
+########################### 端口
+
+server:
+  # 项目的端口号
+  port: 9090
+
+########################### 项目整体 配置
+
+spring:
+
+  # 多环境配置
+  profiles:
+    active: BUG
+
+  # 配置项目热部署
+  devtools:
+    restart:
+      # 开启 项目热部署
+      enabled: true
+
+########################### MySQL数据库
+  datasource:
+    # 驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 链接
+    url: jdbc:mysql://127.0.0.1:3306/数据库名?serverTimezone=UTC&characterEncoding=utf-8
+    # 账号
+    username: root
+    # 密码
+    password: 1234
+  # thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+
+########################### MyBatis-Plus
+
+mybatis-plus:
+  global-config:
+    # MyBatis-Plus 图标是否开启
+    banner: false
+  type-aliases-package: com.Change_BUG.Model
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    # MyBatis-Plus 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapperxml/**/*Mapper.xml
+
+########################### swagger
+
+swagger:
+  enable: true # 是否开启 swagger2
+  name: 定时任务服务器 # 项目名称
+  author: ChangeBUG # 项目作者
+  version: 1.0.1 # 项目版本
+  basic:
+    enable: false # 是否开启 swagger2 登录
+    username: admin # 账号
+    password: admin # 密码
