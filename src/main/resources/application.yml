@@ -35,10 +35,11 @@ spring:
     password: 1234
   # thymeleaf
   thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    mode: HTML
-    encoding: UTF-8
+    cache: false # 缓存关闭
+    prefix: classpath:/thymeleaf/ # 配置thymeleaf模板所在的位置。
+    encoding: UTF-8 #编码
+    suffix: .html #模板后缀
+    mode: HTML #模板
 
 ########################### MyBatis-Plus
 

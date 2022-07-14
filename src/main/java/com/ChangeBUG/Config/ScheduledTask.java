@@ -1,25 +1,21 @@
 package com.ChangeBUG.Config;
 
 import com.ChangeBUG.Model.FileTable;
-import com.ChangeBUG.Service.FileTableService;
 import com.ChangeBUG.Utils.PythonUtils;
+import com.ChangeBUG.Utils.TimeUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-
 @Component
 public class ScheduledTask {
 
     @Autowired
-    FileTableService fileTableService;
-    @Autowired
     PythonUtils pythonUtils;
+    @Autowired
+    TimeUtils timeUtils;
 
     Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -41,16 +37,16 @@ public class ScheduledTask {
     @Scheduled(fixedDelay = 1000)
     public void scheduledTask() throws Exception {
 
-        Date date = new Date();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-        String time = dateFormat.format(date);
-        if (time.equals("19:17:00")) {
-            List<FileTable> list = fileTableService.list();
-            for (FileTable fileTable : list) {
+        if (timeUtils.GetDangTime().equals("13:14:00")) {
+
+            StartAllJobInit.fileTableList.forEach(System.out::println);
+            for (FileTable fileTable : StartAllJobInit.fileTableList) {
                 System.out.println(fileTable.getFileName());
                 System.out.println(pythonUtils.RunPython(StartAllJobInit.SysPath + fileTable.getFilePath()));
             }
+
         }
+
 
     }
 

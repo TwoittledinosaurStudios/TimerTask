@@ -17,6 +17,7 @@ import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.springframework.stereotype.Component;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
@@ -30,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Component
 public class HttpUtils {
 
     /**

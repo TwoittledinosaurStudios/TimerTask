@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ChangeBUG.Mapper.SysLogMapper">
+  <resultMap id="BaseResultMap" type="com.ChangeBUG.Model.SysLog">
+    <!--@mbg.generated-->
+    <!--@Table sys_log-->
+    <result column="log_log" jdbcType="LONGVARCHAR" property="logLog" />
+    <result column="log_time" jdbcType="TIMESTAMP" property="logTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    log_log, log_time
+  </sql>
+</mapper>

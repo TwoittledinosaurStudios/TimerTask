@@ -3,6 +3,7 @@ package com.ChangeBUG.Utils;
 import com.sun.mail.util.MailSSLSocketFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -12,6 +13,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
+@Component
 public class MailUtils {
 
     Logger logger = LoggerFactory.getLogger(getClass().getName());
