@@ -23,23 +23,13 @@ spring:
       # 开启 项目热部署
       enabled: true
 
-########################### MySQL数据库
-  datasource:
-    # 驱动
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    # 链接
-    url: jdbc:mysql://127.0.0.1:3306/数据库名?serverTimezone=UTC&characterEncoding=utf-8
-    # 账号
-    username: root
-    # 密码
-    password: 1234
   # thymeleaf
   thymeleaf:
     cache: false # 缓存关闭
-    prefix: classpath:/thymeleaf/ # 配置thymeleaf模板所在的位置。
-    encoding: UTF-8 #编码
+    prefix: classpath:/templates/ # 配置thymeleaf模板所在的位置。
     suffix: .html #模板后缀
-    mode: HTML #模板
+    encoding: UTF-8 #编码
+    mode: HTML5 #模板
 
 ########################### MyBatis-Plus
 

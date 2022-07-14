@@ -9,11 +9,5 @@ spring:
     username: root
     # 密码
     password: 1234
-  # thymeleaf
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    mode: HTML5
-    encoding: UTF-8
 
 
